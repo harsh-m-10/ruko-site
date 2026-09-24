@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruko Privacy Policy</title>
+  <meta name="description" content="Privacy policy for Ruko, an on-device price tracker for Indian shopping sites." />
+  <style>
+    :root { --bg: #ffffff; --text: #1a1d21; --muted: #5b6470; --rule: #e3e6e8; --accent: #1f6feb; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0d1117; --text: #e6edf3; --muted: #8b949e; --rule: #30363d; --accent: #4493f8; } }
+    html { background: var(--bg); }
+    body { margin: 0 auto; max-width: 42rem; padding: 2.5rem 1rem 4rem; color: var(--text); background: var(--bg);
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    h1 { font-size: 1.9rem; margin: 0 0 .25rem; line-height: 1.2; }
+    h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; }
+    p, li { margin: .5rem 0; }
+    ul { padding-left: 1.25rem; }
+    .tagline { color: var(--muted); margin: 0 0 1.5rem; }
+    .summary { border: 1px solid var(--rule); border-radius: 12px; padding: .75rem 1.25rem; }
+    .meta { color: var(--muted); font-size: .9rem; margin-top: 2.5rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
+    a { color: var(--accent); }
+    code { font-size: .9em; }
+  </style>
+</head>
+<body>
+  <h1>Ruko Privacy Policy</h1>
+  <p class="tagline">Ruko. Daam girega. (Wait. The price will drop.)</p>
+
+  <div class="summary">
+    <p><strong>In short:</strong> Ruko has no account, no analytics, no ads and no server of its own. The developer does not
+      collect any data about you. Everything Ruko knows stays on your phone.</p>
+  </div>
+
+  <h2>What Ruko does</h2>
+  <p>Ruko is a price tracker. You share or paste a product link, and Ruko checks that product's price and availability
+    on shopping sites from your own phone, then notifies you when the price drops or the item comes back in stock.</p>
+
+  <h2>Data stored on your phone</h2>
+  <ul>
+    <li>The products you track: links, titles, images, prices and price history.</li>
+    <li>Your settings: check schedule, alert thresholds and similar preferences.</li>
+    <li>API keys or access tokens you choose to enter. These are kept in Android's secure, hardware-backed storage
+      (Keystore) and are never included in exports or backups made by Ruko.</li>
+  </ul>
+  <p>This data never leaves your phone except as described below. The developer has no copy of it and no way to see it.</p>
+
+  <h2>Network connections Ruko makes</h2>
+  <ul>
+    <li><strong>Shopping sites.</strong> Ruko fetches the product pages you track (for example Amazon.in or Flipkart)
+      directly from your phone, the same way your browser would. Those sites see a normal request from your phone and
+      handle it under their own privacy policies.</li>
+    <li><strong>AI and search providers you choose (optional).</strong> If you add your own API key for an AI or search
+      provider, Ruko sends product details (such as a product title, brand, model or page text) to that provider only,
+      to find and compare the same product on other sites. Your key is sent only to the provider it belongs to. Nothing
+      is sent if you do not add a key.</li>
+    <li><strong>ntfy (optional).</strong> If you set up an ntfy topic in Settings, Ruko sends your price alerts (item name,
+      price and site) to the ntfy server you entered, so you can receive them on other devices.</li>
+  </ul>
+  <p>There are no other network connections: no analytics, advertising, tracking or crash-reporting services.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><strong>Internet and network state:</strong> to fetch product pages and, if you set them up, reach your chosen providers.</li>
+    <li><strong>Notifications:</strong> to alert you about price drops and items back in stock.</li>
+    <li><strong>Run at startup, keep awake, background work:</strong> so scheduled price checks can run in the background.</li>
+    <li><strong>Vibrate:</strong> for alert notifications.</li>
+  </ul>
+
+  <h2>Sharing and selling</h2>
+  <p>The developer does not collect, share or sell any personal data. There is nothing to share: Ruko does not send your
+    data to the developer.</p>
+
+  <h2>Deleting your data</h2>
+  <p>Delete any item inside the app to remove it and its history. Uninstalling Ruko removes all of its data, including
+    stored keys, from your phone.</p>
+
+  <h2>Children</h2>
+  <p>Ruko is intended for adults (18+) and is not directed at children.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the updated version will be published on this page with a new effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: open an issue at
+    <a href="https://github.com/harsh-m-10/ruko-site/issues">github.com/harsh-m-10/ruko-site/issues</a>.</p>
+
+  <p class="meta">Effective 24 September 2026 · App: Ruko (<code>com.harshm.ruko</code>)</p>
+</body>
+</html>
