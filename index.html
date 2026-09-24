@@ -39,23 +39,19 @@
   <ul>
     <li>The products you track: links, titles, images, prices and price history.</li>
     <li>Your settings: check schedule, alert thresholds and similar preferences.</li>
-    <li>API keys or access tokens you choose to enter. These are kept in Android's secure, hardware-backed storage
-      (Keystore) and are never included in exports or backups made by Ruko.</li>
+    <li>The ntfy access token, if you enter one. It is kept in Android's secure, hardware-backed storage (Keystore)
+      and is never included in exports or backups made by Ruko.</li>
   </ul>
   <p>This data never leaves your phone except as described below. The developer has no copy of it and no way to see it.</p>
 
   <h2>Network connections Ruko makes</h2>
   <ul>
-    <li><strong>Shopping sites.</strong> Ruko fetches the product pages you track (for example Amazon.in or Flipkart)
-      directly from your phone, the same way your browser would. Those sites see a normal request from your phone and
+    <li><strong>Shopping sites.</strong> Ruko fetches the product pages you track (for example Amazon.in or Flipkart),
+      and the sites' own search pages when you compare prices, directly from your phone, the same way your browser would. Those sites see a normal request from your phone and
       handle it under their own privacy policies.</li>
     <li><strong>Quick-commerce delivery location (optional).</strong> Sites like Blinkit or Zepto show prices for a
       delivery location. If you set one, you pick it on the site's own page inside Ruko's in-app browser. That site's
       cookies stay on your phone and are sent back only to that site. Ruko does not read or store your location.</li>
-    <li><strong>AI and search providers you choose (optional).</strong> If you add your own API key for an AI or search
-      provider, Ruko sends product details (such as a product title, brand, model or page text) to that provider only,
-      to find and compare the same product on other sites. Your key is sent only to the provider it belongs to. Nothing
-      is sent if you do not add a key.</li>
     <li><strong>ntfy (optional).</strong> If you set up an ntfy topic in Settings, Ruko sends your price alerts (item name,
       price and site) to the ntfy server you entered, so you can receive them on other devices.</li>
   </ul>
