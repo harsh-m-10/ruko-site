@@ -49,9 +49,22 @@
     <li><strong>Shopping sites.</strong> Ruko fetches the product pages you track (for example Amazon.in or Flipkart),
       and the sites' own search pages when you compare prices, directly from your phone, the same way your browser would. Those sites see a normal request from your phone and
       handle it under their own privacy policies.</li>
-    <li><strong>Quick-commerce delivery location (optional).</strong> Sites like Blinkit or Zepto show prices for a
-      delivery location. If you set one, you pick it on the site's own page inside Ruko's in-app browser. That site's
-      cookies stay on your phone and are sent back only to that site. Ruko does not read or store your location.</li>
+    <li><strong>Quick-commerce delivery location (optional).</strong> Sites like Blinkit, Zepto, Swiggy Instamart,
+      JioMart and Flipkart Minutes show prices for a delivery location. You can set it in two ways:
+      <ul>
+        <li><strong>By hand:</strong> pick it on the site's own page inside Ruko's in-app browser. That site's cookies
+          stay on your phone and are sent back only to that site.</li>
+        <li><strong>From your approximate location (from version 0.4, only if you choose it):</strong> with your
+          permission, Ruko reads your phone's <em>approximate</em> location (Android's coarse location, about 1 km),
+          only while you are using that screen and never in the background. It turns it into an area name
+          (locality, city, PIN code) on your phone, then writes it into each of those sites' own location settings on
+          your phone. <strong>Your approximate location is therefore sent to those shopping sites</strong>, the same
+          way it would be if you picked it in their own location picker. It is not sent to the developer. Ruko keeps
+          only the area name on your phone, to show you which area is set.</li>
+      </ul>
+      Android's reverse geocoder may use Google Play services to turn coordinates into an area name. You can clear a
+      site's location in Settings → Quick-commerce locations, and turn the permission off in Android settings at any
+      time.</li>
     <li><strong>ntfy (optional).</strong> If you set up an ntfy topic in Settings, Ruko sends your price alerts (item name,
       price and site) to the ntfy server you entered, so you can receive them on other devices.</li>
   </ul>
@@ -63,11 +76,14 @@
     <li><strong>Notifications:</strong> to alert you about price drops and items back in stock.</li>
     <li><strong>Run at startup, keep awake, background work:</strong> so scheduled price checks can run in the background.</li>
     <li><strong>Vibrate:</strong> for alert notifications.</li>
+    <li><strong>Approximate location (optional, from version 0.4):</strong> only if you choose "Use my location" for
+      quick-commerce delivery areas. Ruko never asks for precise or background location.</li>
   </ul>
 
   <h2>Sharing and selling</h2>
   <p>The developer does not collect, share or sell any personal data. There is nothing to share: Ruko does not send your
-    data to the developer.</p>
+    data to the developer. The only personal data that leaves your phone is your approximate location, and only if you
+    use "Use my location": it goes to the quick-commerce sites listed above, so they can show prices for your area.</p>
 
   <h2>Deleting your data</h2>
   <p>Delete any item inside the app to remove it and its history. Uninstalling Ruko removes all of its data, including
