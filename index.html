@@ -28,7 +28,8 @@
 
   <div class="summary">
     <p><strong>In short:</strong> Ruko has no account, no analytics, no ads and no server of its own. The developer does not
-      collect any data about you. Everything Ruko knows stays on your phone.</p>
+      collect any data about you. Everything Ruko knows stays on your phone. The only personal data that can leave it is
+      your approximate location, and only if you choose to let Ruko set quick-commerce delivery areas with it.</p>
   </div>
 
   <h2>What Ruko does</h2>
@@ -39,8 +40,7 @@
   <ul>
     <li>The products you track: links, titles, images, prices and price history.</li>
     <li>Your settings: check schedule, alert thresholds and similar preferences.</li>
-    <li>The ntfy access token, if you enter one. It is kept in Android's secure, hardware-backed storage (Keystore)
-      and is never included in exports or backups made by Ruko.</li>
+    <li>If you use "Use my location": the name of your area (locality, city, PIN code), never coordinates.</li>
   </ul>
   <p>This data never leaves your phone except as described below. The developer has no copy of it and no way to see it.</p>
 
@@ -65,14 +65,15 @@
       Android's reverse geocoder may use Google Play services to turn coordinates into an area name. You can clear a
       site's location in Settings → Quick-commerce locations, and turn the permission off in Android settings at any
       time.</li>
-    <li><strong>ntfy (optional).</strong> If you set up an ntfy topic in Settings, Ruko sends your price alerts (item name,
-      price and site) to the ntfy server you entered, so you can receive them on other devices.</li>
   </ul>
-  <p>There are no other network connections: no analytics, advertising, tracking or crash-reporting services.</p>
+  <p>There are no other network connections: no analytics, advertising, tracking or crash-reporting services. Alerts
+    are notifications on your phone only.</p>
+  <p>Versions up to 0.3 also offered an optional "ntfy" setting that sent alert text (item name, price, site) to an ntfy
+    server you chose. It was removed in version 0.4.</p>
 
   <h2>Permissions</h2>
   <ul>
-    <li><strong>Internet and network state:</strong> to fetch product pages and, if you set them up, reach your chosen providers.</li>
+    <li><strong>Internet and network state:</strong> to load the shopping sites' pages.</li>
     <li><strong>Notifications:</strong> to alert you about price drops and items back in stock.</li>
     <li><strong>Run at startup, keep awake, background work:</strong> so scheduled price checks can run in the background.</li>
     <li><strong>Vibrate:</strong> for alert notifications.</li>
@@ -86,8 +87,8 @@
     use "Use my location": it goes to the quick-commerce sites listed above, so they can show prices for your area.</p>
 
   <h2>Deleting your data</h2>
-  <p>Delete any item inside the app to remove it and its history. Uninstalling Ruko removes all of its data, including
-    stored keys, from your phone.</p>
+  <p>Delete any item inside the app to remove it and its history. Clear a shop's delivery location in Settings →
+    Quick-commerce locations. Uninstalling Ruko removes all of its data from your phone.</p>
 
   <h2>Children</h2>
   <p>Ruko is intended for adults (18+) and is not directed at children.</p>
