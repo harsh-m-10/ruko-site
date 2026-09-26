@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Ruko for shops</title>
+  <meta name="description" content="What Ruko reads from shopping sites, and how a shop can ask to be excluded." />
+  <style>
+    :root { --bg: #ffffff; --text: #1a1d21; --muted: #5b6470; --rule: #e3e6e8; --accent: #1f6feb; --draft-bg: #fff4d6; --draft-rule: #e8c66a; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0d1117; --text: #e6edf3; --muted: #8b949e; --rule: #30363d; --accent: #4493f8; --draft-bg: #3a2e0d; --draft-rule: #8a6d1f; } }
+    html { background: var(--bg); }
+    body { margin: 0 auto; max-width: 42rem; padding: 2.5rem 1rem 4rem; color: var(--text); background: var(--bg);
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    h1 { font-size: 1.9rem; margin: 0 0 .25rem; line-height: 1.2; }
+    h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; }
+    p, li { margin: .5rem 0; }
+    ul { padding-left: 1.25rem; }
+    .draft { background: var(--draft-bg); border: 1px solid var(--draft-rule); border-radius: 12px; padding: .75rem 1.25rem; margin: 0 0 1.5rem; font-weight: 600; }
+    .meta { color: var(--muted); font-size: .9rem; margin-top: 2.5rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
+    a { color: var(--accent); }
+    code { font-size: .9em; }
+  </style>
+</head>
+<body>
+  <p class="draft">Draft, pending legal review.</p>
+
+  <h1>For shops</h1>
+  <p>Ruko is a price comparison and price alert app for Android. This page explains what it reads from your site and how
+    to ask us to leave your site out.</p>
+
+  <h2>What Ruko reads</h2>
+  <ul>
+    <li>Public product pages that a Ruko user has chosen to track: product name, price, M.R.P., stock status, seller and
+      image link.</li>
+    <li>Your public search results page, when a user searches for a product or compares prices across shops.</li>
+  </ul>
+  <p>Ruko does not log in, does not add to cart, does not place orders, and does not read anything behind a login.</p>
+
+  <h2>How it runs</h2>
+  <ul>
+    <li><strong>Only on users' own phones.</strong> Each request comes from one user's phone, for that user's own tracked
+      items or search, the way their phone's browser would.</li>
+    <li><strong>Low frequency.</strong> Tracked products are checked at the times the user chooses, once a day by default,
+      with pauses between requests to the same site. Ruko backs off automatically when a site says no.</li>
+    <li><strong>No central server.</strong> Ruko has no server that collects, stores or resells your prices or catalogue.
+      Each user's data stays on their phone.</li>
+  </ul>
+
+  <h2>Asking to be excluded</h2>
+  <p>If you would rather Ruko didn't read your site, email <strong>[contact email to be confirmed]</strong> from an address
+    at your company's domain, with your site's address. We will reply within 7 days. Once we agree, Ruko stops reading your
+    site on every phone within about a day, without users needing to update the app.</p>
+  <p>You can use the same address to report a problem, for example if Ruko sends more requests than described above.</p>
+
+  <p class="meta">Draft dated 26 September 2026 · <a href="terms.html">Terms of use</a> · <a href="./">Privacy policy</a></p>
+</body>
+</html>

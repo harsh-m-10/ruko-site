@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
   <title>Ruko Privacy Policy</title>
   <meta name="description" content="Privacy policy for Ruko, an on-device price tracker for Indian shopping sites." />
   <style>
@@ -17,12 +18,14 @@
     ul { padding-left: 1.25rem; }
     .tagline { color: var(--muted); margin: 0 0 1.5rem; }
     .summary { border: 1px solid var(--rule); border-radius: 12px; padding: .75rem 1.25rem; }
+    .draft { background: #fff4d6; border: 1px solid #e8c66a; border-radius: 12px; padding: .75rem 1.25rem; margin: 0 0 1.5rem; font-weight: 600; color: #1a1d21; }
     .meta { color: var(--muted); font-size: .9rem; margin-top: 2.5rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
     a { color: var(--accent); }
     code { font-size: .9em; }
   </style>
 </head>
 <body>
+  <p class="draft">Draft, pending legal review. The policy in effect is the one published at harsh-m-10.github.io/ruko-site.</p>
   <h1>Ruko Privacy Policy</h1>
   <p class="tagline">Ruko. Daam girega. (Wait. The price will drop.)</p>
 
@@ -63,8 +66,18 @@
           only the area name on your phone, to show you which area is set.</li>
       </ul>
       Android's reverse geocoder may use Google Play services to turn coordinates into an area name. You can clear a
-      site's location in Settings → Quick-commerce locations, and turn the permission off in Android settings at any
+      site's location in Settings → Grocery delivery area. Turning off "Use approximate location" there makes Ruko stop
+      using your location and forget your area name; you can also turn the permission off in Android settings at any
       time.</li>
+  </ul>
+  <ul>
+    <li><strong>Ruko's shop list (at most once a day).</strong> Ruko downloads a small file,
+      <code>shops.json</code>, from this website (hosted on GitHub Pages). It lists shops Ruko should stop reading, for
+      example because a shop asked us to, or because its pages changed and broke. It is a plain download of the same file
+      for everyone: Ruko sends nothing about you, your phone or your items with it. Like any website, GitHub receives your
+      phone's IP address when the file is downloaded, under
+      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.
+      The developer does not receive or log these requests.</li>
   </ul>
   <p>There are no other network connections: no analytics, advertising, tracking or crash-reporting services. Alerts
     are notifications on your phone only.</p>
@@ -88,7 +101,7 @@
 
   <h2>Deleting your data</h2>
   <p>Delete any item inside the app to remove it and its history. Clear a shop's delivery location in Settings →
-    Quick-commerce locations. Uninstalling Ruko removes all of its data from your phone.</p>
+    Grocery delivery area. Uninstalling Ruko removes all of its data from your phone.</p>
 
   <h2>Children</h2>
   <p>Ruko is intended for adults (18+) and is not directed at children.</p>
@@ -97,9 +110,10 @@
   <p>If this policy changes, the updated version will be published on this page with a new effective date.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy: open an issue at
+  <p>Questions about this policy: <strong>[contact email to be confirmed]</strong>, or open an issue at
     <a href="https://github.com/harsh-m-10/ruko-site/issues">github.com/harsh-m-10/ruko-site/issues</a>.</p>
 
-  <p class="meta">Effective 25 September 2026 · App: Ruko (<code>com.harshm.ruko</code>)</p>
+  <p class="meta">Draft dated 26 September 2026 (replaces the policy effective 25 September 2026 once published) · App: Ruko (<code>com.harshm.ruko</code>) ·
+    <a href="terms.html">Terms of use</a> · <a href="shops.html">For shops</a></p>
 </body>
 </html>
