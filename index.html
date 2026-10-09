@@ -61,11 +61,17 @@
           your phone. <strong>Your approximate location is therefore sent to those shopping sites</strong>, the same
           way it would be if you picked it in their own location picker. It is not sent to the developer. Ruko keeps
           only the area name on your phone, to show you which area is set.</li>
+        <li><strong>From a PIN code (from version 0.7, only if you choose it):</strong> you type your PIN code, and Ruko
+          looks it up on <a href="https://www.openstreetmap.org/">OpenStreetMap</a> (its Nominatim service) to find the
+          area. <strong>Only the PIN code is sent to OpenStreetMap</strong>, with no other data. The area is then set on
+          the shopping sites as above.</li>
       </ul>
       Android's reverse geocoder may use Google Play services to turn coordinates into an area name. You can clear a
       site's location in Settings → Quick-commerce locations, and turn the permission off in Android settings at any
       time.</li>
   </ul>
+  <p>For sale reminders, Ruko downloads a public list of sale dates from this website (<code>sales.json</code>). Nothing
+    about you is sent with it.</p>
   <p>There are no other network connections: no analytics, advertising, tracking or crash-reporting services. Alerts
     are notifications on your phone only.</p>
   <p>Versions up to 0.3 also offered an optional "ntfy" setting that sent alert text (item name, price, site) to an ntfy
@@ -84,7 +90,8 @@
   <h2>Sharing and selling</h2>
   <p>The developer does not collect, share or sell any personal data. There is nothing to share: Ruko does not send your
     data to the developer. The only personal data that leaves your phone is your approximate location, and only if you
-    use "Use my location": it goes to the quick-commerce sites listed above, so they can show prices for your area.</p>
+    use "Use my location" or set your area by PIN code: it goes to the quick-commerce sites listed above, so they can
+    show prices for your area. A PIN code you type also goes to OpenStreetMap, to find the area.</p>
 
   <h2>Deleting your data</h2>
   <p>Delete any item inside the app to remove it and its history. Clear a shop's delivery location in Settings →
@@ -100,6 +107,6 @@
   <p>Questions about this policy: open an issue at
     <a href="https://github.com/harsh-m-10/ruko-site/issues">github.com/harsh-m-10/ruko-site/issues</a>.</p>
 
-  <p class="meta">Effective 25 September 2026 · App: Ruko (<code>com.harshm.ruko</code>)</p>
+  <p class="meta">Effective 9 October 2026 · App: Ruko (<code>com.harshm.ruko</code>)</p>
 </body>
 </html>
