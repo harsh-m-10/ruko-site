@@ -1,0 +1,61 @@
+name: Sale dates
+
+# Every Monday morning (India time), and on demand: look for officially announced sales, open a pull
+# request that adds them to sales.json (GitHub emails you about it). Merging it publishes them to the app.
+on:
+  schedule:
+    - cron: '30 2 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      HAS_SMTP: ${{ secrets.SMTP_HOST != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Ask Gemini for announced sales
+        id: find
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: |
+          out=$(node scripts/find-sales.mjs)
+          echo "$out"
+          if [ "$out" = "NO_CHANGES" ]; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Open a pull request
+        id: pr
+        if: steps.find.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="sales/$(date +%Y-%m-%d)"
+          git config user.name "ruko-sales-bot"
+          git config user.email "ruko-sales-bot@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add sales.json
+          git commit -m "Sale dates found $(date +%Y-%m-%d)"
+          git push -u origin "$branch"
+          url=$(gh pr create --title "New sale dates to check ($(date +%d %b))" --body-file sales-summary.md --base main --head "$branch")
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+      # GitHub already emails the repo owner about new pull requests; this extra mail is optional.
+      - name: Email the link
+        if: steps.find.outputs.changed == 'true' && env.HAS_SMTP == 'true'
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
+          ALERT_EMAIL_FROM: ${{ secrets.ALERT_EMAIL_FROM }}
+          PR_URL: ${{ steps.pr.outputs.url }}
+        run: |
+          npm install --no-save nodemailer@6
+          node scripts/mail-pr.mjs
