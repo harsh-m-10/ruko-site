@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "disabled": ["bigbasket"],
+  "updated": "2026-10-11",
+  "note": "BigBasket paused: its site returns 403 to the app's searches."
+}
