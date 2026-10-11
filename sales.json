@@ -1,9 +1,27 @@
 {
-  "updated": "2026-10-09",
+  "updated": "2026-10-11",
   "note": "Sale dates for Ruko's sale reminders. Add a sale only once the shop announces its start; 'ends' is optional. Times are India time; a bare date means midnight.",
   "sales": [
-    { "id": "flipkart-bbd-2026", "retailer": "flipkart", "name": "Big Billion Days", "starts": "2026-10-09" },
-    { "id": "amazon-gif-2026", "retailer": "amazon", "name": "Great Indian Festival", "starts": "2026-10-08" },
-    { "id": "myntra-bff-2026", "retailer": "myntra", "name": "Big Fashion Festival", "starts": "2026-10-08" }
+    { "id": "flipkart-bbd-2026",
+      "retailer": "flipkart",
+      "name": "Big Billion Days",
+      "starts": "2026-10-09"
+    },
+    { "id": "amazon-gif-2026",
+      "retailer": "amazon",
+      "name": "Great Indian Festival",
+      "starts": "2026-10-08"
+    },
+    { "id": "myntra-bff-2026",
+      "retailer": "myntra",
+      "name": "Big Fashion Festival",
+      "starts": "2026-10-08"
+    },
+    { "id": "ajio-allstar-2026",
+      "retailer": "ajio",
+      "name": "All Star Sale",
+      "starts": "2026-10-07",
+      "ends": "2026-10-18"
+    }
   ]
 }
